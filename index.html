@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link rel="icon" type="image/png" href="https://totzer.github.io/BronyaKitchen/icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://totzer.github.io/BronyaKitchen/icon.png">
+    <meta name="apple-mobile-web-app-title" content="Bronya Kitchen">
+    <meta charset="utf-8">
+    <meta name="author" content="Z.Star(toa-toz)">
+    <meta name="keywords" content="ホム,ブローニャ,ミニゲーム">
+    <meta name="description" content="ブローニャがシチュー屋さんをする、パズルゲーム！">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>BronyaKitchen v1.0 by Z.Star</title>
+
+
+
+<link rel="shortcut icon" href="https://totzer.github.io/BronyaKitchen/" type="image/x-icon">
+
+<link rel="icon" href="https://totzer.github.io/BronyaKitchen/" sizes="32x32">
+<link rel="icon" href="https://totzer.github.io/BronyaKitchen/" sizes="48x48">
+<link rel="icon" href="https://totzer.github.io/BronyaKitchen/" sizes="96x96">
+<link rel="icon" href="https://totzer.github.io/BronyaKitchen/" sizes="144x144">
+
+
+<meta name="application-name" content="Bronya Kitchen"/>
+<meta name="msapplication-square70x70logo" content="https://totzer.github.io/BronyaKitchen/"/>
+<meta name="msapplication-square150x150logo" content="https://totzer.github.io/BronyaKitchen/"/>
+<meta name="msapplication-square310x310logo" content="https://totzer.github.io/BronyaKitchen/"/>
+<meta name="msapplication-wide310x150logo" content="https://totzer.github.io/BronyaKitchen/"/>
+<meta name="msapplication-TileColor" content="rgba(255, 255, 255, 0.98)"/>
+
+
+
+<meta name="theme-color" content="rgba(255, 255, 255, 0.98)">
+
+<meta name="title" content="Bronya Kitchen">
+<meta name="description" content="ブローニャがシチュー屋さんをする、パズルゲーム！">
+
+
+
+
+<meta property="og:site_name" content="BronyaKitchen v1.0 by Z.Star">
+<meta property="og:url" content="https://totzer.github.io/BronyaKitchen">
+<meta property="og:title" content="Bronya Kitchen">
+<meta property="og:image" content="https://totzer.github.io/BronyaKitchen/title.png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="350">
+<meta property="og:description" content="ブローニャがシチュー屋さんをする、パズルゲーム！">
+<meta property="og:type" content="website">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vertek18">
+<meta name="twitter:creator" content="@vertek18">
+<meta name="twitter:url" content="https://totzer.github.io/BronyaKitchen">
+<meta name="twitter:title" content="Bronya Kitchen">
+<meta name="twitter:description" content="ブローニャがシチュー屋さんをする、パズルゲーム！">
+<meta name="twitter:image" content="https://totzer.github.io/BronyaKitchen/title.png">
+  </head>
+  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/Build.loader.js"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+
+        
+
+      }
+      var canvas = document.querySelector("#unity-canvas");
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.position = "fixed";
+        document.body.style.textAlign = "left";
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Build.data",
+        frameworkUrl: "Build/Build.framework.js",
+        codeUrl: "Build/Build.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "HomuC",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
